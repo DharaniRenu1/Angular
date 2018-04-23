@@ -7,12 +7,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    CommentComponent,
  
   ],
   imports: [
