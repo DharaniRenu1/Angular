@@ -1,7 +1,7 @@
       
     
-        <div fxFlex="50">
-            <md-card>
+        <div fxFlex="40" fxLayout="column" style="text-align:left" [@visibility]="visibility" [@expand]>
+            <md-card  *ngIf="dish">
                 <md-card-header>
                   <md-card-title>
                     <h3>{{dish.name | uppercase}}</h3>

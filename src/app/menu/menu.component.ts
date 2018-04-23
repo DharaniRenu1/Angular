@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { Comment } from '../comment';
-
+import { Dishes } from '../shared/dishes';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -10,41 +10,13 @@ import { Comment } from '../comment';
 
 export class MenuComponent implements OnInit {
 
-  dish = Dish;
-  
-  dishes: Dish[] = [
-    {
-      name:'Uthappizza',
-      images: '/assets/images/uthappizza.png',
-      category: 'mains',
-      label:'Hot',
-      price:'4.99',
-      description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
-   {
-      name:'Zucchipakoda',
-      images: '/assets/images/zucchipakoda.png',
-      category: 'appetizer',
-      label:'',
-      price:'1.99',
-      description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce'                        },
-   {
-      name:'Vadonut',
-      images: '/assets/images/vadonut.png',
-      category: 'appetizer',
-      label:'New',
-      price:'1.99',
-      description:'A quintessential ConFusion experience, is it a vada or is it a donut?'                        },
-   {
-      name:'ElaiCheese Cake',
-      images: '/assets/images/elaicheesecake.png',
-      category: 'dessert',
-      label:'',
-      price:'2.99',
-      description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms'                        }
-   ];
+  dishes:Dish[] = Dishes;
+  selectedDish:Dish;
   constructor() { }
 
   ngOnInit() {
   }
-
+onSelect(dish:Dish){
+  this.selectedDish=dish;
+}
 }

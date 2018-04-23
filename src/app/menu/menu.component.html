@@ -1,19 +1,22 @@
-<div fxFlex="100">
+<div      fxLayout="column"fxLayoutGap="10px">
+
+  <div fxFlex>
     <h3>Menu</h3>
-     <md-grid-list cols="2" rowHeight="200px">
-         <md-grid-tile *ngFor="let dish of dishes">
-           <img height="200px" src={{dish.images}} alt={{dish.name}}>
-           <md-grid-tile-footer>
-             <h1 md-line>{{dish.name | uppercase}}</h1>
-           </md-grid-tile-footer>
-         </md-grid-tile>
-       </md-grid-list>
-     <hr>
-   </div>
+      <hr>
+</div>
+  <div fxFlex>
+    <md-grid-list cols="2" rowHeight="200px">
+      <md-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)">
+        <img height="200px" src={{dish.images}} alt={{dish.name}}>
+        <md-grid-tile-footer>
+          <h1 md-line>{{dish.name | uppercase}}</h1>
+        </md-grid-tile-footer>
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+  <app-comment [dish]="selectedDish"></app-comment>
+</div>
 
-     
-
-  
  
    
        
