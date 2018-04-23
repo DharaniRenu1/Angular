@@ -1,0 +1,48 @@
+
+
+ 
+      <div fxFlex>
+          <div>
+            <h3>Menu</h3>
+            <md-grid-list cols="2" rowHeight="200px">
+                <md-grid-tile *ngFor="let dish of dishes">
+                  <img height="200px" src={{dish.images}} alt={{dish.name}}>
+                  <md-grid-tile-footer>
+                    <h1 md-line>{{dish.name | uppercase}}</h1>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+              </md-grid-list>
+            <hr>
+          </div>
+        </div>
+        
+   
+  
+
+    
+<div fxFlex="40">
+    <div fxFlex>
+    <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h3>{{dish.name | uppercase}}</h3>
+        </md-card-title>
+      </md-card-header>
+      <img md-card-image src={{dish.images}} alt={{dish.name}}>
+      <md-card-content>
+        <p>{{dish.description}}
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  </div>
+
+
+
+
+
+
